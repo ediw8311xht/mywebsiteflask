@@ -1,0 +1,53 @@
+
+/* rdrama.net##[src*="/i/rDrama/banner2.webp?v=2000"] */
+/* rdrama.net/assets/images/backgrounds/anime/1.webp?v=3 */
+/* rdrama.net##[src*="/static/assets/images/Drama/banners/"] */
+/* rdrama.net##[href*="/static/assets/images/Drama/banners/"] */
+/* rdrama.net##[src*="/assets/images/rDrama/banner2.webp?v=1"] */
+/* rdrama.net###main-content-row > .col.sidebar.text-left.d-none.d-lg-block.pt-3.pb-5.bg-white > .mb-4 */
+/* rdrama.net##[src*="/assets/images/rDrama/banners/.*"] */
+/* rdrama.net##[src*="/assets/images/rDrama/banners/"] */
+/* rdrama.net##.card-header.bg-gray-100 */
+/* rdrama.net##.card-body */
+/* rdrama.net##.card.pseudo-submit-form.border */
+/* rdrama.net###sidebar-content */
+/* rdrama.net##[src*="https://rdrama.net/images/16577908124513159.webp"] */
+/* rdrama.net###sub-name */
+/* rdrama.net##.container-fluid */
+/* rdrama.net##.srd */
+/* rdrama.net##[href*="/assets/event/css/themes/light.css"] */
+/* rdrama.net##*.user-info > .pronouns */
+/* ||rdrama.net/assets/event/js/snow.js* */
+/* rdrama.net##[src="/assets/event/js/"] */
+/* rdrama.net###frontpage > div[style*="transform: translate3d"] */
+/* ||rdrama.net/cdn-cgi/scripts/ */
+
+
+||rdrama.net/event/
+||rdrama.net/assets/event/js/
+||rdrama.net/assets/event/css/
+||rdrama.net/assets/event/media/music/
+||rdrama.net/assets/images/banners/
+||rdrama.net/i/hats/
+||rdrama.net/i/rDrama/hats/
+||rdrama.net/i/rDrama/houses/
+||rdrama.net/assets/event/images/pointer.png
+||rdrama.net/assets/event/images/awards/
+||rdrama.net/assets/event/images/lights.png
+||rdrama.net/cdn-cgi/challenge-platform/h/g/scripts/
+||rdrama.net/cdn-cgi/challenge-platform/
+||rdrama.net/assets/css/banners/
+||rdrama.net/assets/images/hats/
+||rdrama.net/assets/js/award_modal.js*
+||rdrama.net/assets/js/mobile_navigation_bar.js*
+||rdrama.net/service-worker.js*
+/* rdrama.net###awards-container */
+/* rdrama.net##[id^="banner-"] */
+/* rdrama.net##.fall-snowflake */
+/* rdrama.net##.blizzard */
+/* rdrama.net##[id^="signature-"] */
+/* rdrama.net##[id^="mobile-bottom-navigation-bar"] */
+/* rdrama.net##.site-banner */
+/* rdrama.net###awards-container */
+
+

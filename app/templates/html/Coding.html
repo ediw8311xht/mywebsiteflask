@@ -1,0 +1,19 @@
+{% extends "html/BASE.html" %}
+
+{% block content %}
+
+<style type="text/css">
+#zb-nav-code { 
+  background-color: gray; 
+  color: black;
+}
+</style>
+
+<h1>Coding</h1>
+
+{% for proj in projects %}
+  {{ proj }}
+{% endfor %}
+
+
+{% endblock %}

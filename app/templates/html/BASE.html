@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   	<meta charset="UTF-8">
+    <meta name="color-scheme" content="dark only">
+   	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/BASE.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  </head>
+  <body>
+    <div id="MMM-nav-bar-top">
+      <div id="MMM-nav-container">
+        <div id="MMM-nav-left">
+          <h1 id="MMM-nav-title">Maximilian Ballard</h1>
+        </div>
+        <div id="MMM-nav-right">
+          <a class="MMM-nav-right-el" href="/">Home</a>
+          <a class="MMM-nav-right-el" href="/Coding">Coding</a>
+          <a class="MMM-nav-right-el" href="/Writing">Writing</a>
+          <a class="MMM-nav-right-el" href="/Games">Games</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="base-container">
+      <div id="content">
+        {% block content %}{% endblock %}
+      </div>          
+    </div>
+  </body>
+</html>

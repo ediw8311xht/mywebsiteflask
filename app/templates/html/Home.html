@@ -1,0 +1,16 @@
+{% extends "html/BASE.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Home.css') }}">
+
+<h1>Home</h1>       
+<div id="home-about-me">
+  <p>Some Programming and Linux stuff, mostly.</p>
+  <a href="https://stackexchange.com/users/6465103/maximilian-ballard">
+    <img src="https://stackexchange.com/users/flair/6465103.png" width="208" height="58" alt="profile for Maximilian Ballard on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Maximilian Ballard on Stack Exchange, a network of free, community-driven Q&amp;A sites"/>
+  </a>
+  <span></span>
+</div>
+
+{% endblock %}
