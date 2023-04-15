@@ -2,11 +2,11 @@ from flask import Flask, current_app
 from . import main
 import os
 
+
+def file_exists(path_str):
+    return path_str if os.path.exists(path_str) else False
+    
 def get_file(path_str):
-
-    if type(path_str) != str:
-        raise ArgumentError("Invalid argument")
-
     wts = current_app.config["SAVE_PATH"] + '/' + path_str
     return wts if os.path.exists(wts) else False
 
