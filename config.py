@@ -8,6 +8,7 @@ class Config:
     DB_USER = os.environ['DB_USERNAME']
     DB_PASS = os.environ['DB_PASSWORD']
     DB_NAME = os.environ['DB_NAME']
+    SAVE_PATH = os.environ['SAVE_PATH']
     @staticmethod
     def init_app(app):
         pass
