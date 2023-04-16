@@ -1,23 +1,23 @@
 import psycopg2
-from flask import Flask, abort, send_from_directory, render_template, redirect, url_for, request
+from flask import current_app, abort, send_from_directory, render_template, redirect, url_for, request
 from . import main
-from app.main.file_handling import file_exists, get_file
+from app.main.file_handling import file_exists, get_file, get_path_template
+from jinja2.exceptions import TemplateNotFound
+from pprint import pprint
 #from .. import db
 
-pages = {'Coding', 'Writing', 'Games', 'Home'}
+valid_pages = {'Coding', 'Writing', 'Games', 'Home', 'NotTemplate'}
 
 @main.route("/")
 def home():
     return render_template('html/Home.html')
 
-@main.route("/<string:page_name>")
-def html_page(page_name):
-    try:
-        if page_name in pages:
-            return render_template('html/' + page_name + '.html')
-        else:
-            raise FileNotFoundError
-    except FileNotFoundError:
+@main.route("/<string:pname>")
+def html_page(pname):
+    composed = 'html/' + pname + '.html'
+    if pname in valid_pages and get_path_template(composed):
+        return render_template(composed)
+    else:
         abort(404)
 
 #@main.route("/<str:category>/<str:path_str>")

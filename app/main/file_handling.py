@@ -1,5 +1,6 @@
 from flask import Flask, current_app
 from . import main
+from jinja2.exceptions import TemplateNotFound
 import os
 
 
@@ -9,6 +10,12 @@ def file_exists(path_str):
 def get_file(path_str):
     wts = current_app.config["SAVE_PATH"] + '/' + path_str
     return wts if os.path.exists(wts) else False
+
+def get_path_template(template_name):
+    try:
+        return current_app.jinja_env.get_or_select_template(template_name).filename
+    except TemplateNotFound:
+        return False
 
 
 #pargs = [ ('find', '-type', 'd', '-print0'),
