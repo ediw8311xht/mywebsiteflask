@@ -4,11 +4,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
-    DB_URL  = os.environ['DB_URL']
-    DB_USER = os.environ['DB_USERNAME']
-    DB_PASS = os.environ['DB_PASSWORD']
-    DB_NAME = os.environ['DB_NAME']
-    SAVE_PATH = os.environ['SAVE_PATH']
     @staticmethod
     def init_app(app):
         pass
