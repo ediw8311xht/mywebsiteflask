@@ -11,8 +11,8 @@
 
 <h1>Games</h1>
 
-{% for game in games %}
-  {{ game }}
+{% for dir in dirs %}
+  <a href="/sub/Games/{{dir}}">{{ dir }}</a>
 {% endfor %}
 
 {% endblock %}
