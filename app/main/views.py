@@ -3,10 +3,10 @@ from flask import current_app, abort, send_from_directory, render_template, redi
 from . import main
 from app.main.file_handling import file_exists, get_file, get_path_template
 from jinja2.exceptions import TemplateNotFound
-from pprint import pprint
+#from pprint import pprint
 #from .. import db
 
-valid_pages     = {'Coding', 'Writing', 'Games', 'Home'}
+valid_pages = {'Coding', 'Writing', 'Games', 'Home'}
 
 @main.route("/")
 def home():
@@ -20,13 +20,10 @@ def parent_page(pname):
     else:
         abort(404)
 
-@main.route("/<string:pname>/<string:cname>")
+@main.route("/<string:pname>/sub/<string:cname>")
 def child_page(pname, cname):
-    if pname in valid_pages:
-        if cname.isdigit():
-            return render_template( f'html/{pname}.html', file_pass=cname )
-        elif get_path_template(f'html/{pname}/{cname}.html'):
-            return render_template( f'html/{pname}/{cname}.html' )
+    if pname in valid_pages and cname.isdigit():
+        return render_template( f'html/sub/{pname}_sub.html', path_pass=f'sub/{pname}/{cname}.txt' )
     abort(404)
 
 
