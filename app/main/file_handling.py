@@ -5,7 +5,7 @@ import os
 
 
 def only_alpha(s):
-    alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 '
     for i in s:
         if i not in alpha:
             return False

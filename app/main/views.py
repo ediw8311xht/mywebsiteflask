@@ -28,7 +28,7 @@ def parent_page(pname):
 @main.route("/sub/<string:pname>/<string:cname>")
 def child_page(pname, cname):
     if pname in valid_pages and only_alpha(cname):
-        return render_template( f'html/sub/{pname}_sub.html', path_pass=f'sub/{pname}/{cname}/index.html' )
+        return render_template( f'html/sub/{pname}_sub.html', url_pass=url_for('static', filename=f"sub/{pname}/{cname}/index.html") )
     abort(404)
 
 
