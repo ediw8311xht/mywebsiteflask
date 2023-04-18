@@ -1,7 +1,7 @@
 import psycopg2
 from flask import current_app, abort, send_from_directory, render_template, redirect, url_for, request
 from . import main
-from app.main.file_handling import file_exists, get_file, get_path_template
+from app.main.file_handling import file_exists, get_file, get_path_template, only_alpha
 from jinja2.exceptions import TemplateNotFound
 #from pprint import pprint
 #from .. import db
@@ -20,10 +20,12 @@ def parent_page(pname):
     else:
         abort(404)
 
-@main.route("/<string:pname>/sub/<string:cname>")
+@main.route("/sub/<string:pname>/<string:cname>")
 def child_page(pname, cname):
-    if pname in valid_pages and cname.isdigit():
-        return render_template( f'html/sub/{pname}_sub.html', path_pass=f'sub/{pname}/{cname}.txt' )
+    if pname in valid_pages and only_alpha(cname):
+        print("HI")
+        print(f'sub/{pname}/{cname}')
+        return render_template( f'html/sub/{pname}_sub.html', path_pass=f'sub/{pname}/{cname}/index.html' )
     abort(404)
 
 

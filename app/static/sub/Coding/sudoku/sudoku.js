@@ -5,7 +5,7 @@ function piece_print_html(x, y, value) {
 	if (value === 0) {
 		value = "-";
 	}
-	$("#position" + x + "-" + y).text(value);
+	document.getElementById("position" + x + "-" + y).innerText = value;
 }
 
 function queue_callback() {
@@ -33,19 +33,19 @@ function SudokuBoard(initial_arr) {
 	}
 	
 	this.initiate_html = function() {
-		$("#board").empty();
+		document.getElementById('board').innerHTML = '';
 		for (let i = 0; i < 3; i++) {
-			$("#board").append("<div class='row' id='column" + i + "' ></div>");
+			document.getElementById('board').innerHTML += "<div class='row' id='column" + i + "' ></div>";
 			for (let j = 0; j < 3; j++) {
-				$("#column" + i).append("<div class='cell' id='cell" + i + "-" + j + "' ></div>");
+				document.getElementById('column' + i).innerHTML += "<div class='cell' id='cell" + i + "-" + j + "' ></div>";
 				for (let width = 0; width < 3; width++) {
 					for (let height = 0; height < 3; height++) {
 						let value = this.arr[(i * 3) + width][(j * 3) + height];
 						if (value === 0) {
-							$("#cell" + i + "-" + j).append("<p class='space change' id='position"	+ ((i * 3) + width) + "-" + ((j * 3) + height) + "' '>" + "-" + "</p>");
+							document.getElementById("cell" + i + "-" + j).innerHTML += "<p class='space change' id='position"	+ ((i * 3) + width) + "-" + ((j * 3) + height) + "' '>" + "-" + "</p>";
 						}
 						else {
-							$("#cell" + i + "-" + j).append("<p class='space non-change' id='position"	+ ((i * 3) + width) + "-" + ((j * 3) + height) + "' '>" + value + "</p>");
+							document.getElementById("cell" + i + "-" + j).innerHTML += "<p class='space non-change' id='position"	+ ((i * 3) + width) + "-" + ((j * 3) + height) + "' '>" + value + "</p>";
 						}
 					}
 				}
@@ -126,7 +126,8 @@ var test_board = "200080300\n060070084\n030500209\n000105408\n000000000\n4027060
 var test_board2 = "3 8 0 0 0 0 0 0 0\n0 0 0 4 0 0 7 8 5 \n0 0 9 0 2 0 3 0 0 \n0 6 0 0 9 0 0 0 0 \n8 0 0 3 0 2 0 0 9 \n0 0 0 0 4 0 0 7 0 \n0 0 1 0 7 0 5 0 0 \n4 9 5 0 0 6 0 0 0 \n0 0 0 0 0 0 0 9 2";
 
 
-$(document).ready(function() {
+//Created this a long time ago, converted it quickly from jquery to vanilla js so it may have issues whatever.
+document.addEventListener('DOMContentLoaded', function() {
 	var test = new SudokuGame(test_board);
 	console.time('someFunction');
 	console.log(test.backtrack());

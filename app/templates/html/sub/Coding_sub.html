@@ -7,10 +7,14 @@
   background-color: gray;
   color: black;
 }
+#coding-embed {
+  width: min(80%, 800px);
+  height: min(90vh, 800px);
+}
 </style>
 
 <h1>Coding</h1>
 
-<embed type="text/plain" src="{{ url_for('static', filename=path_pass) }}" >
+<embed id='coding-embed' type="text/html" src="{{ url_for('static', filename=path_pass) }}" />
 
 {% endblock %}
