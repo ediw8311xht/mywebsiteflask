@@ -6,19 +6,29 @@ from jinja2.exceptions import TemplateNotFound
 from pprint import pprint
 #from .. import db
 
-valid_pages = {'Coding', 'Writing', 'Games', 'Home', 'NotTemplate'}
+valid_pages     = {'Coding', 'Writing', 'Games', 'Home'}
 
 @main.route("/")
 def home():
     return render_template('html/Home.html')
 
 @main.route("/<string:pname>")
-def html_page(pname):
-    composed = 'html/' + pname + '.html'
+def parent_page(pname):
+    composed = f'html/{pname}.html'
     if pname in valid_pages and get_path_template(composed):
         return render_template(composed)
     else:
         abort(404)
+
+@main.route("/<string:pname>/<string:cname>")
+def child_page(pname, cname):
+    if pname in valid_pages:
+        if cname.isdigit():
+            return render_template( f'html/{pname}.html', file_pass=cname )
+        elif get_path_template(f'html/{pname}/{cname}.html'):
+            return render_template( f'html/{pname}/{cname}.html' )
+    abort(404)
+
 
 #@main.route("/<str:category>/<str:path_str>")
 #def generic_file_category(category):

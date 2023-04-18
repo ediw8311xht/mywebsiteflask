@@ -4,6 +4,12 @@ from jinja2.exceptions import TemplateNotFound
 import os
 
 
+def only_alpha(s):
+    for i in s:
+        if i not in alpha:
+            return False
+    return True
+
 def file_exists(path_str):
     return path_str if os.path.exists(path_str) else False
     
