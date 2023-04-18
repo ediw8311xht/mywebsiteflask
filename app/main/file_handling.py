@@ -29,3 +29,4 @@ def get_path_template(template_name):
 #          ('find', '-type', 'f', '-print0') ]
 #sr = lambda l: shellx(l, capture_output=True, text=True).stdout
 #bash_find_files = shellx(['find', f'{pfrom}', '-print0' ], capture_output=True, text=True).stdout
+
