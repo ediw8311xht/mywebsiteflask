@@ -1,0 +1,41 @@
+body {
+  text-align: center;
+}
+
+#checker-board {
+  margin-top: 100px;  
+}
+
+.checker_image {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  width: 50px;
+}
+
+.square {
+  margin: 0px;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  text-align: center;
+  line-height: 82px;
+  font-size: 55px;
+  font-family: courier;
+  font-weight: bold;
+}
+
+.black-square {
+  background-color: rgb(89, 9, 0);
+}
+
+.red-square {
+  background-color: rgb(160,82,45);
+}
+
+.black-piece {
+  content: black;
+}
+
+.red-piece {
+  color: red;
+}

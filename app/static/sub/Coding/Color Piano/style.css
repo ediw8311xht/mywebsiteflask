@@ -1,0 +1,88 @@
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+.piano-key {
+    cursor: pointer;
+}
+
+.piano-keyboard {
+    border: solid black 40px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 10vh;
+    position: relative;
+    max-width: 800px;
+    max-height: 350px;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.piano-key-w {
+    position: absolute;
+    background: linear-gradient(to left, rgb(255, 0, 0), rgb(0, 0, 255));
+    width: 14.28%;
+    outline: solid red 0px;
+    margin: 0px;
+    height: 100%;
+    z-index: 0;
+}
+
+.piano-key-b {
+    position: absolute;
+    background: linear-gradient( rgb(0, 0, 0), rgb(0, 0, 0) 50% );
+    width: calc((100% / 10));
+    height: 60%;
+    z-index: 1;
+    border: none;
+}
+
+.piano-note-c {
+    left: 0px;
+    
+}
+
+.piano-note-ci {
+    left: calc( ((100% / 7) * 1) - (100% / 19.5));
+}
+
+.piano-note-d {
+    left: calc((100% / 7) * 1);
+}
+
+.piano-note-di {
+    left: calc( ((100% / 7) * 2) - (100% / 20));
+}
+
+.piano-note-e {
+    left: calc( (100% / 7) * 2);
+}
+
+.piano-note-f {
+    left: calc(((100% / 7) * 3));
+}
+
+.piano-note-fi {
+    left: calc( ((100% / 7) * 4) - (100% / 19.5));
+}
+
+.piano-note-g {
+    left: calc((100% / 7) * 4);
+}
+
+.piano-note-gi {
+    left: calc( ((100% / 7) * 5) - (100% / 19.5));
+}
+
+.piano-note-a {
+    left: calc((100% / 7) * 5);
+}
+
+.piano-note-ai {
+    left: calc( ((100% / 7) * 6) - (100% / 19.5));
+}
+
+.piano-note-b {
+    left: calc((100% / 7) * 6);
+}

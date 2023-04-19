@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+label {
+   color: red;   
+}
+
+.button_container {
+   text-align: center;   
+}
+
+#Count {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+
+#Canvas {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}

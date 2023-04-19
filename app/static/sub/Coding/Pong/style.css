@@ -1,0 +1,36 @@
+body {
+  text-align: center;
+}
+
+#Canvas {
+  margin-top: 100px;
+  background-color: black;
+}
+
+#button_container {
+  text-align: center;
+}
+
+#start_button {
+  width: 300px;
+  height: 30px;
+  border: none;
+  background-color: rgb(140, 140, 255);
+}
+
+#reset_button {
+  position: absolute;
+  margin-left: 10px;
+  height: 30px;
+  border: none;
+  background-color: rgb(255, 100, 100);
+}
+
+button:hover, input:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}

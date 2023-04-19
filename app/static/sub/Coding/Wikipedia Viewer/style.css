@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+  background-color: gray;
+}
+
+#title {
+  margin: 30px;
+  background-color: rgb(40, 100, 100);
+}
+
+div {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#random_entry {
+  margin-top: 30px;
+  margin-bottom: 5px;  
+}
+
+#random_article {
+  color: blue;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#random_article:hover {
+  text-decoration: underline;
+}
+
+input {
+  font-size: 15px;
+}
+
+.description {
+  text-decoration: none;
+  color: black;
+}
+
+.entry {
+  height: 200px;
+  display: inline-block;
+  margin: 10px 10px 10px 10px;
+  width: 400px;
+  background-color: green;
+}

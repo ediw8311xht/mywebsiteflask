@@ -1,0 +1,66 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-size: 140%;
+}
+
+#MMM-wrapper {
+    width: 90vw;
+    margin: 0px auto;
+    margin-top: 5vh;
+    height: 60vh;
+}
+
+.MMM-label {
+    box-sizing: border-box;
+    width: 49vw;
+    margin: 0px;
+    margin-top: 5vh;
+    padding: 0px;
+    display: inline-block;
+    font-family: Arial;
+}
+
+#MMM-text-input, #MMM-text-result {
+    width: 50%;
+    height: 100%;
+    margin: 0px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: solid black 1px;
+    display: block;
+    resize: none;
+    text-align: left;
+    font-family: monospace;
+}
+
+#MMM-text-input {
+    float: left;
+    font-size: 100%;
+}
+
+#MMM-text-result {
+    float: right;
+}
+
+.MMM-el {
+    margin: 0px;
+    padding: 0px;
+}
+
+.MMM-horizontal-bar {
+    background-color: black;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.MMM-img {
+    
+}
+
+.MMM-link {
+    text-decoration: none;
+}
