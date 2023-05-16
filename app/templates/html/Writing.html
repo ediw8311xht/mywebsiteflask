@@ -14,6 +14,16 @@
 
 <span id="zb-writing-seperator"></span>
 
+<div id="zb-posts">
+  {% for dir in dirs %}
+    <div>
+      <a href="/sub/Writing/{{dir}}">{{ dir }}</a>
+    </div>
+  {% endfor %}
+</div>
+
+<div style='height:20px; background-color: green; margin: 20px;'></div>
+
 <h3 class="writing-title">Matthew 10:34-39</h3>
 <ul id="home-most-important">
   <li>[34] Do not think that I have come to bring peace to the earth. I have not come to bring peace, but a sword.</li>
@@ -23,11 +33,5 @@
   <li>[38] And whoever does not take his cross and follow me is not worthy of me.</li>
   <li>[39] Whoever finds his life will lose it, and whoever loses his life for my sake will find it.</li></ul>
 </ul>
-
-<div id="zb-posts">
-  {% for dir in dirs %}
-    <a href="/sub/Writing/{{dir}}">{{ dir }}</a>
-  {% endfor %}
-</div>
 
 {% endblock %}

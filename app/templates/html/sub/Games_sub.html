@@ -7,8 +7,14 @@
   background-color: gray; 
   color: black;
 }
+#games-embed {
+  width: min(80%, 800px);
+  height: min(90vh, 800px);
+}
 </style>
 
 <h1>Games</h1>
+
+<embed id="games-embed" type="text/html" src="{{ url_pass }}"/>
 
 {% endblock %}
