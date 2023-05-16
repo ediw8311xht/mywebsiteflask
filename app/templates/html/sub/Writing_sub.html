@@ -8,8 +8,14 @@
   background-color: gray; 
   color: black;
 }
+#writing-embed {
+  width: min(80%, 800px);
+  height: min(90vh, 800px);
+}
 </style>
 
 <h1>Writing</h1>
+
+<embed id="writing-embed" type="text/html" src="{{ url_pass }}"/>
 
 {% endblock %}
