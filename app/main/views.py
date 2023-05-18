@@ -16,7 +16,8 @@ def favicon_icon():
 
 @main.route("/")
 def home():
-    return render_template('html/Home.html')
+    images = os.listdir(f'/{current_app.static_folder}/images/home/')
+    return render_template('html/Home.html', images=images)
 
 @main.route("/<string:pname>")
 def parent_page(pname):

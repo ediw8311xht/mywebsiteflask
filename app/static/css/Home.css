@@ -1,15 +1,25 @@
 
-#zb-nav-home {
-    /*background-color: blue !important;*/
-    /*#color: black;*/
+#home-about-links {
+  height: 500px;
+  display: inline-block;
 }
-
-#home-container {
-    /*background-color: red !important;*/
-    font-family: Arial, Helvetica, sans-serif, Times, "Times New Roman";
-}
-
 
 .home-title {
     font-family: 'Source Code Pro', monospace;
 }
+
+.home-image {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.base-about-el {
+  display: flex;
+  margin: 20px;
+  opacity: 70%;
+}
+
+.base-about-el:hover {
+  opacity: 100%;
+}
+

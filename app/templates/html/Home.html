@@ -5,13 +5,20 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Home.css') }}"/>
 
 <h1>Home</h1>
+
 <div id="home-about-me">
   <p>Some Programming and Linux stuff, mostly.</p>
-  <img src="{{ url_for('static', filename='images/il_do_the_praxis.webp') }}" alt="il do the praxis tard"/>
-  <a href="https://stackexchange.com/users/6465103/maximilian-ballard">
-    <img src="https://stackexchange.com/users/flair/6465103.png" width="208" height="58" alt="profile for Maximilian Ballard on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Maximilian Ballard on Stack Exchange, a network of free, community-driven Q&amp;A sites"/>
-  </a>
-  <span></span>
+  {% for image in images %}
+    <img class="home-image" src="{{ url_for('static', filename='images/home/'+image) }}" alt=""/>
+  {% endfor %}
+  <span id="home-about-links">
+    <a class="base-about-el" href="https://stackexchange.com/users/6465103/maximilian-ballard"><img src="https://stackexchange.com/users/flair/6465103.png" width="208" height="58" alt="profile for Maximilian Ballard on Stack Exchange" title="profile for Maximilian Ballard on Stack Exchange"/></a>
+    <a class="base-about-el" href="https://projecteuler.net/profile/maxballard.png"><img src="https://projecteuler.net/profile/maxballard.png"/></a>
+    <a class="base-about-el" href="https://www.codewars.com/users/maxballard"><img src="https://www.codewars.com/users/maxballard/badges/large"/></a>
+  </span>
+</div>
+
+<div id="base-about">
 </div>
 
 {% endblock %}
