@@ -3,24 +3,32 @@
 {% block content %}
 
 <style type="text/css">
-#zb-nav-code {
-  background-color: gray;
-  color: black;
-}
+  #zb-nav-code {
+    background-color: gray;
+    color: black;
+  }
+  .section {
+    display: inline-block;
+  }
+  .section-title {
+    background-color: #333;
+    color: #0F0;
+  }
 </style>
 
 <h1>Coding</h1>
 
+  <div class="section">
     {% for section in sections %}
 
-        <h2>{{ section['name'] }}</h2>
+        <h2 class="section-title">{{ section['name'] }}</h2>
 
         {% for dir in section['dirs'] %}
             <div>
-              <a href="/sub/Coding/{{dir}}">{{ dir }}</a>
+              <a href="/sub/Coding/{{section['name']}}/{{dir}}">{{ dir }}</a>
             </div>
         {% endfor %}
 
     {% endfor %}
-
+  </div>
 {% endblock %}
