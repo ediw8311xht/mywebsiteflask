@@ -11,11 +11,16 @@
 
 <h1>Coding</h1>
 
+    {% for section in sections %}
 
-{% for dir in dirs %}
-<div>
-  <a href="/sub/Coding/{{dir}}">{{ dir }}</a>
-</div>
-{% endfor %}
+        <h2>{{ section['name'] }}</h2>
+
+        {% for dir in section['dirs'] %}
+            <div>
+              <a href="/sub/Coding/{{dir}}">{{ dir }}</a>
+            </div>
+        {% endfor %}
+
+    {% endfor %}
 
 {% endblock %}
