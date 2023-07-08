@@ -8,13 +8,17 @@
 
 <div id="home-about-me">
   <p>Some Programming and Linux stuff, mostly.</p>
-  {% for image in images %}
+  <!--
+    {% for image in images %}
     <img class="home-image" src="{{ url_for('static', filename='images/home/'+image) }}" alt=""/>
-  {% endfor %}
+    {% endfor %}
+  -->
   <span id="home-about-links">
     <a class="base-about-el" href="https://stackexchange.com/users/6465103/maximilian-ballard"><img src="https://stackexchange.com/users/flair/6465103.png" width="208" height="58" alt="profile for Maximilian Ballard on Stack Exchange" title="profile for Maximilian Ballard on Stack Exchange"/></a>
+    <!--
     <a class="base-about-el" href="https://projecteuler.net/profile/maxballard.png"><img src="https://projecteuler.net/profile/maxballard.png"/></a>
     <a class="base-about-el" href="https://www.codewars.com/users/maxballard"><img src="https://www.codewars.com/users/maxballard/badges/large"/></a>
+    -->
   </span>
 </div>
 
