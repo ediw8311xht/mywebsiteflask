@@ -9,7 +9,10 @@ body {
 
 #home-link-nav {
   text-decoration: none;
-  color: white;
+  color: #2E9EFF;
+  /*
+    color: #2E5EAA;
+   */
 }
 
 #MMM-nav-bar-top {
