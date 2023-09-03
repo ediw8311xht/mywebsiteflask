@@ -7,6 +7,11 @@ body {
     font-family: "Fjalla One";
 }
 
+#home-link-nav {
+  text-decoration: none;
+  color: white;
+}
+
 #MMM-nav-bar-top {
     width: 90vw;
     margin: 0 auto;
