@@ -14,24 +14,25 @@
     background-color: #333;
     color: #0F0;
   }
+  #MMM-nav-el-coding {
+    color: gray;
+  }
 </style>
 
-<h1>Coding</h1>
+<div class="section">
 
-  <div class="section">
+  <h2 class="section-title">Extensions</h2>
+    <h3><a href="https://addons.mozilla.org/en-US/firefox/addon/zero-word-replacer/">Zero: Word Replacer</a></h3>
 
-    <h2 class="section-title">Extensions</h2>
-      <h3><a href="https://addons.mozilla.org/en-US/firefox/addon/zero-word-replacer/">Zero: Word Replacer</a></h3>
-    {% for section in sections %}
-
+      {% for section in sections %}
         <h2 class="section-title">{{ section['name'] }}</h2>
-
         {% for dir in section['dirs'] %}
             <div>
               <h3><a href="/sub/Coding/{{section['name']}}/{{dir}}">{{ dir }}</a></h3>
             </div>
         {% endfor %}
+      {% endfor %}
 
-    {% endfor %}
-  </div>
+</div>
+
 {% endblock %}

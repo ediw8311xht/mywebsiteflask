@@ -2,7 +2,34 @@
 
 {% block content %}
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Home.css') }}"/>
+<style>
+  #home-link-nav  {
+    color: gray !important;
+  }
+  #home-about-links {
+    height: 500px;
+    display: inline-block;
+  }
+
+  .home-title {
+      font-family: 'Source Code Pro', monospace;
+  }
+
+  .home-image {
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .base-about-el {
+    display: flex;
+    margin: 20px;
+    opacity: 70%;
+  }
+
+  .base-about-el:hover {
+    opacity: 100%;
+  }
+</style>
 
 <div id="home-about-me">
   <p>Some Programming and Linux stuff, mostly.</p>

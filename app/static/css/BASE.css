@@ -7,7 +7,7 @@ body {
     font-family: "Fjalla One";
 } #home-link-nav {
   text-decoration: none;
-  color: #2E9EFF;
+  color: white;
 } #content-seperator {
   height: 25px;
 } #MMM-nav-bar-top {
@@ -40,4 +40,7 @@ body {
     margin-left: 10vw;
     margin-right: 10vw;
     font-family: 'Source Code Pro', monospace;
+} .link-no-spec, .link-no-spec:visited, .link-no-spec:active {
+    color: rgb(0, 120, 255);
+    text-decoration: none;
 }
