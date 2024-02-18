@@ -19,10 +19,6 @@ def home():
     images = os.listdir(f'/{current_app.static_folder}/images/home/')
     return render_template('html/Home.html', images=images)
 
-@main.route("/unblockit")
-def unblockit():
-    return render_template('html/Unblockit.html')
-
 @main.route("/<string:pname>")
 def parent_page(pname):
     composed = f'html/{pname}.html'

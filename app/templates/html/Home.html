@@ -13,8 +13,8 @@
       font-family: 'Source Code Pro', monospace;
   }
   .home-image {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: min(400px, 70vw);
+    max-height: min(400px, 70vh);
   }
   .base-about-el {
     display: flex;
@@ -31,11 +31,11 @@
     padding: 20px;
   }
   .home-verse {
-    font-family: sans-serif;
+    font-family: serif;
     text-decoration: none;
     display: block;
     margin: 10px;
-    font-size: 14px;
+    font-size: 0.9em;
   }
   .home-verse:hover {
     color: gold !important;
@@ -43,10 +43,12 @@
   }
   .home-verse:nth-child(odd)    { color: rgb(20, 255,  100); }
   .home-verse:nth-child(even)   { color: rgb(200, 200, 200); }
+  .home-header { color: #DDD; }
+  .home-section > :not(h1, h2, h3, h4, h5, h6) { margin-left: min(10px, 1vw); }
 </style>
 
-<div id="home-about-me">
-  <p>Some Programming and Linux stuff, mostly.</p>
+<div class="home-section" id="home-about-me">
+  <h3 class="home-header">God, Programming, and Linux</h3>
 
   <!--
     {% for image in images %}
@@ -60,10 +62,19 @@
     <a class="base-about-el" href="https://www.codewars.com/users/maxballard"><img src="https://www.codewars.com/users/maxballard/badges/large"/></a>
     -->
   </span>
+
 </div>
 
-<div id="base-about">
-  <h2 id="home-verse-header">Matthew 19:20-30</h2>
+<div class="home-section">
+  <h3 class="home-header">BDS movement</h4>
+  <!-- Free Palestine -->
+  <a href="https://bdsmovement.net/news/chomsky-clarifies-position-cultural-boycott-israel">
+    <img class="home-image" src="{{ url_for('static', filename='images/home/chomsky.jpg') }}" alt=""/>
+  </a>
+</div>
+
+<div class="home-section" id="base-about">
+  <h2 class="home-header">Matthew 19:20-30</h2>
   <a class="home-verse" href="https://www.wordproject.org/bibles/kj/40/19.htm#20">The young man saith unto him, All these things have I kept from my youth up: what lack I yet?</a>
 
   <a class="home-verse" href="https://www.wordproject.org/bibles/kj/40/19.htm#21">Jesus said unto him, If thou wilt be perfect, go and sell that thou hast, and give to the poor, and thou shalt have treasure in heaven: and come and follow me.</a>
