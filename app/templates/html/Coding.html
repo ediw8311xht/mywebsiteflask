@@ -9,29 +9,50 @@
   }
   .section {
     display: inline-block;
+    vertical-align: top !important;
+    margin-right: min(5%, 10px);
   }
   .section-title {
     background-color: #333;
     color: #0F0;
+    font-size: min(1.1em, 28vw);
+    padding-left: 2%;
+  }
+  .section-member {
+    font-size: min(1em, 25vw);
+  }
+  .section-link, .section-link:visited {
+    text-decoration: underline !important;
+    color: #0077FF;
   }
   #MMM-nav-el-coding {
     color: gray;
   }
+
 </style>
 
 <div class="section">
+  <h2 class="section-title">Website</h2>
+    <h3 class="section-member"><a class="section-link" href="https://github.com/ediw8311xht/mywebsiteflask">Personal Website</a></h3>
+    <h3 class="section-member"><a class="section-link" href="https://github.com/ediw8311xht/ChessSiteSpring">Chess Site</a></h3>
+    <h3 class="section-member"><a class="section-link" href="https://github.com/ediw8311xht/Flash-Cards-Spring">Flashcard Site</a></h3>
+</div>
 
+
+<div class="section">
   <h2 class="section-title">Extensions</h2>
-    <h3><a href="https://addons.mozilla.org/en-US/firefox/addon/zero-word-replacer/">Zero: Word Replacer</a></h3>
+    <h3 class="section-member"><a class="section-link"href="https://addons.mozilla.org/en-US/firefox/addon/zero-word-replacer/">Zero: Word Replacer</a></h3>
+</div>
 
-      {% for section in sections %}
-        <h2 class="section-title">{{ section['name'] }}</h2>
-        {% for dir in section['dirs'] %}
-            <div>
-              <h3><a href="/sub/Coding/{{section['name']}}/{{dir}}">{{ dir }}</a></h3>
-            </div>
-        {% endfor %}
+<div class="section">
+    {% for section in sections %}
+      <h2 class="section-title">{{ section['name'] }}</h2>
+      {% for dir in section['dirs'] %}
+          <div>
+            <h3 class="section-member"><a class="section-link" href="/sub/Coding/{{section['name']}}/{{dir}}">{{ dir }}</a></h3>
+          </div>
       {% endfor %}
+    {% endfor %}
 
 </div>
 
